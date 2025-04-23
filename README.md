@@ -20,9 +20,14 @@ This tutorial outlines creating a DNS A-Record, flushing DNS cache, and creating
 <h2>High-Level Deployment and Configuration Steps</h2>
 
 - Ping Mainframe and see that it doesn't work
-- Step 2
-- Step 3
-- Step 4
+- Go into dc-1 via Remote Desktop as an admin, access DNS and add new host. The IP address has to mamtch dc-1's private address of 10.0.0.4
+- Ping Mainframe again
+- For DNS flushing, change the IP address to 8.8.8.8
+- ping Mainframe and notice that it doesn't show updated IP address
+- type the command ipconfig /flushdns
+- ping Mainframe again and the address should be updated
+- For CNAME, got to mydomain in DNS manager and create a new CNAME called search.
+- FDQN should be www.google.com and ping IP address
 
 <h2>Deployment and Configuration Steps</h2>
 
